@@ -19,8 +19,9 @@ public class LoginStepDefinitions {
     private LoginPage loginPage;
 
     @Before
-    public void setup(){
+    public void setup() {
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
 
     @After
@@ -40,8 +41,8 @@ public class LoginStepDefinitions {
 
     @Given("I have entered a valid username and password")
     public void i_have_entered_a_valid_username_and_password() {
-        loginPage.enterEmail("qatestertest@gmail.com");
-        loginPage.enterPassword("Test@123");
+        loginPage.enterEmail("seleniumtestng@gmail.com");
+        loginPage.enterPassword("Selenium@123");
     }
 
     @Given("I have entered invalid {string} and {string}")
